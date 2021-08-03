@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 95%;
+    margin: 3rem auto;
+}
+
+.heading {
+    text-align: center;
+}
+
+.section-title, .heading {
+    text-transform: capitalize;
+}
+
+.section-title {
+    position: absolute;
+    border: 1px solid black;
+    border-top: 0;
+    border-right: 0;
+    top: 0px;
+    right: 0px;
+    font-weight: bold;
+    padding: .4rem 1.5rem;
+}
+
+.section-1-title {
+    background: lightcoral;
+}
+
+.section-2-title {
+    background: rgb(216, 71, 71);
+    color: white;
+}
+
+.section-3-title {
+    background: rgb(255, 255, 109);
+}
+
+.sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "section-1 section-2 section-3";
+}
+
+.section {
+    position: relative;
+    border: 1px solid black;
+    padding: 1rem;
+    background: rgb(156, 156, 156);
+    margin: 1rem;
+}
+
+.section-body {
+    margin-top: 1.2rem;
+}
+
+.section-1 {
+    grid-area: section-1;
+}
+
+.section-2 {
+    grid-area: section-2;
+}
+
+.section-3 {
+    grid-area: section-3;
+}
+
+@media (max-width: 991px) {
+    .sections {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "section-1 section-2"
+        "section-3 section-3";
+    }    
+}
+
+@media (max-width: 767px) {
+    .sections {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "section-1"
+        "section-2"
+        "section-3";
+    }
+}
